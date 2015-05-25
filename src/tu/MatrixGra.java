@@ -32,7 +32,7 @@ public class MatrixGra {
      * 返回ch位置
      */
     private int getPosition(char ch) {
-        for(int i=0; i< mVexs.length; i++)
+        for(int i=0; i< mVexs.length; i++) //就是因为这样，字符才转变为数字。通过它们在顶点的数组中的位置。
             if(mVexs[i]==ch)
                 return i;
         return -1;
@@ -51,9 +51,9 @@ public class MatrixGra {
     }
 
     public static void main(String[] args) {
+    	//自己输入顶点和边的数组。
         char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
-        char[][] edges = new char[][]{
-            {'A', 'C'}, {'A', 'D'}, {'A', 'F'}, {'B', 'C'}, {'C', 'D'}, {'E', 'G'}, {'F', 'G'}};
+        char[][] edges = {{'A', 'C'}, {'A', 'D'}, {'A', 'F'}, {'B', 'C'}, {'C', 'D'}, {'E', 'G'}, {'F', 'G'}};
        
          MatrixGra pG = new MatrixGra(vexs, edges);
 
